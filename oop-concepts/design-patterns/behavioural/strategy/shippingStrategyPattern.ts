@@ -1,3 +1,27 @@
+class Order {
+  private readonly weight: number;
+  private readonly destinationZone: string;
+  private readonly value: number;
+
+  constructor(weight: number, destinationZone: string, value: number) {
+    this.weight = weight
+    this.destinationZone = destinationZone;
+    this.value = value;
+  }
+
+  getTotalWeight(): number {
+    return this.weight
+  }
+
+  getDestinationZone(): string {
+    return this.destinationZone;
+  }
+
+  getOrderValue(): number {
+    return this.value;
+  }
+}
+
 enum RateType {
   FLATE_RATE = 'flatRate',
   WEIGHT_BASED = 'weightBased',
